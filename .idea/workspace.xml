@@ -28,8 +28,8 @@
       <file leaf-file-name="ArrayValidator.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ArrayValidator.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="3.0446734" vertical-offset="489" max-vertical-offset="2397">
-              <caret line="133" column="5" selection-start-line="133" selection-start-column="5" selection-end-line="133" selection-end-column="5" />
+            <state vertical-scroll-proportion="3.1615121" vertical-offset="336" max-vertical-offset="2397">
+              <caret line="128" column="41" selection-start-line="128" selection-start-column="41" selection-end-line="128" selection-end-column="41" />
               <folding>
                 <element signature="e#6#86#0#PHP" expanded="true" />
               </folding>
@@ -103,11 +103,11 @@
         <option value="$PROJECT_DIR$/tests/StringValidatorTest.php" />
         <option value="$PROJECT_DIR$/tests/ArrayValidatorTest.php" />
         <option value="$PROJECT_DIR$/tests/IntValidatorTest.php" />
-        <option value="$PROJECT_DIR$/src/ArrayValidator.php" />
         <option value="$PROJECT_DIR$/src/BooleanValidator.php" />
         <option value="$PROJECT_DIR$/src/DateTimeValidator.php" />
         <option value="$PROJECT_DIR$/src/IntValidator.php" />
         <option value="$PROJECT_DIR$/src/StringValidator.php" />
+        <option value="$PROJECT_DIR$/src/ArrayValidator.php" />
       </list>
     </option>
   </component>
@@ -242,7 +242,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
@@ -669,8 +669,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ArrayValidator.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="3.0446734" vertical-offset="489" max-vertical-offset="2397">
-          <caret line="133" column="5" selection-start-line="133" selection-start-column="5" selection-end-line="133" selection-end-column="5" />
+        <state vertical-scroll-proportion="3.1615121" vertical-offset="336" max-vertical-offset="2397">
+          <caret line="128" column="41" selection-start-line="128" selection-start-column="41" selection-end-line="128" selection-end-column="41" />
           <folding>
             <element signature="e#6#86#0#PHP" expanded="true" />
           </folding>

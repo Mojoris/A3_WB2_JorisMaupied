@@ -112,7 +112,7 @@ class ArrayValidator
      * @throws \Exception
      */
     public static function isThereKey($array, $key) {
-        if(is_array($array) === FALSE || is_string($key) === FALSE)
+        if(is_array($array) === false || is_string($key) === false)
             throw new \Exception('Mauvais paramètres saisi');
 
         return (array_key_exists($key, $array)) ? true : false;
