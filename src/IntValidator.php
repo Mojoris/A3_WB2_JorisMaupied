@@ -8,119 +8,105 @@
 
 namespace mojo\Validator;
 
-class IntValidator {
-   /**
-     * @param $varA
-     * @param $varB
+/**
+ * Class IntegerValidator
+ * @package Steingate\Validator
+ */
+class IntValidator
+{
+
+    /**
+     * @param int $a
+     * @param int $b
      *
-     * @return boolean
+     * @return bool
      *
      * @throws \Exception
      */
-
-    public static function equal($varA, $varB)
+    public static function equal($a, $b)
     {
-        if(!is_int($varA) || !is_int($varB))
-            throw new \Exception('Les deux variables doivent être des entiers');
-        if($varA == $varB)
-            return true;
-        else
-            return false;
+        if(!is_int($a) || !is_int($b))
+            throw new \Exception('The two parameters need to be an integer');
+
+        return ($a == $b) ? true : false;
     }
 
     /**
-     * @param int $varA
-     * @param int $varB
+     * @param int $a
+     * @param int $b
      *
-     * @return boolean
+     * @return bool
      *
      * @throws \Exception
      */
-
-    public static function superior($varA, $varB)
+    public static function superior($a, $b)
     {
-        if(!is_int($varA) || !is_int($varB))
-            throw new \Exception('Les deux variables doivent être des entiers');
-        if($varA > $varB)
-            return true;
-        else
-            return false;
+        if(!is_int($a) || !is_int($b))
+            throw new \Exception('The two parameters need to be an integer');
+
+        return ($a > $b) ? true : false;
     }
 
     /**
-     * @param int $varA
-     * @param int $varB
+     * @param int $a
+     * @param int $b
      *
-     * @return boolean
+     * @return bool
      *
      * @throws \Exception
      */
-
-    public static function inferior($varA, $varB)
+    public static function inferior($a, $b)
     {
-        if(!is_int($varA) || !is_int($varB))
-            throw new \Exception('Les deux variables doivent être des entiers');
-        if($varA < $varB)
-            return true;
-        else
-            return false;
+        if(!is_int($a) || !is_int($b))
+            throw new \Exception('The two parameters need to be an integer');
+
+        return ($a < $b) ? true : false;
     }
 
     /**
      * @param int $int
-     * @param int $var1
-     * @param int $var2
+     * @param int $min
+     * @param int $max
      *
-     * @return boolean
-     * @throws \Exception
+     * @return bool
+     * @throws \Exception<
      */
-
-    public static function between($int, $var1, $var2)
+    public static function between($int, $min, $max)
     {
-        if(!is_int($int) || !is_int($var1) || !is_int($var2))
-            throw new \Exception('Les trois variables doivent être des entiers');
-        if($int <= $var1 && $int >= $var2)
-            return true;
-        else
-            return false;
+        if(!is_int($int) || !is_int($min) || !is_int($max))
+            throw new \Exception('The three parameters need to be integer');
+
+        return ($int <= $max && $int >= $min) ?  true : false;
     }
 
     /**
      * @param int $int
      *
-     * @return boolean
+     * @return bool
      *
      * @throws \Exception
      */
-
     public static function negative($int)
     {
         if(!is_int($int))
-            throw new \Exception('La variable doit être un entier');
-        if($int <= 0)
-            return true;
-        else
-            return false;
+            throw new \Exception('The parameter need to be an integer');
 
+        return ($int <= 0) ? true : false;
     }
 
     /**
      * @param int $int
      *
-     * @return boolean
+     * @return bool
      *
      * @throws \Exception
      */
-
     public static function positive($int)
     {
         if(!is_int($int))
-            throw new \Exception('La variable doit être un entier');
-        if($int >= 0)
-            return true;
-        else
-            return false;
+            throw new \Exception('The parameter need to be an integer');
 
+        return ($int >= 0) ?  true : false;
     }
-}
 
+}

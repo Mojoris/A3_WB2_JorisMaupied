@@ -58,21 +58,18 @@ class DateTimeValidator {
 
     /**
      * @param \Datetime $date
-     * @param string $year
+     * @param int       $year
      *
      * @return bool
      *
      * @throws \Exception
      */
-
     public static function isYear(\Datetime $date, $year)
     {
-        if(!is_string($year))
-            throw new \Exception('Le deuxieme paramètre doit être une chaine');
-        if($date->format('Y') === $year)
-            return true;
-        else
-            return false;
+        if(!is_int($year))
+            throw new \Exception('Le deuxième paramètre doit être une chaine');
+
+        return ((int) $date->format('Y') === $year) ? true : false;
     }
 
     /**
