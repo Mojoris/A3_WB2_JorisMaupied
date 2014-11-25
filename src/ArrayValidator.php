@@ -64,7 +64,7 @@ class ArrayValidator {
             throw new \Exception('Le troisieme parametre doit etre un entier');
 
         $arrayLength = count($array);
-
+        $result = 0;
         switch ($comparator){
             case self::LENGTH_EQUAL:
                 $result =  $arrayLength === $integer;
