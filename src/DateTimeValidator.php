@@ -8,16 +8,16 @@
 
 namespace mojo\Validator;
 
-class DateTimeValidator {
+class DateTimeValidator
+{
    
     /**
      * @param \Datetime $date
      *
      * @return bool
      */
-    public static function isMajor(\Datetime $date)
-    {
-        $today = new \DateTime();
+    public static function isMajor(\Datetime $date){
+        $today      = new \DateTime();
         $difference = $date->diff($today);
 
         if($difference->y >= 18)
@@ -32,8 +32,7 @@ class DateTimeValidator {
      * @return bool
      */
 
-    public static function isPassed(\Datetime $date)
-    {
+    public static function isPassed(\Datetime $date){
         $today = new \DateTime();
         if($date < $today)
             return true;
@@ -47,8 +46,7 @@ class DateTimeValidator {
      * @return bool
      */
 
-    public static function isFutur(\Datetime $date)
-    {
+    public static function isFutur(\Datetime $date){
         $today = new \DateTime();
         if($date > $today)
             return true;
@@ -64,9 +62,8 @@ class DateTimeValidator {
      *
      * @throws \Exception
      */
-    public static function isYear(\Datetime $date, $year)
-    {
-        if(!is_int($year))
+    public static function isYear(\Datetime $date, $year){
+        if(is_int($year) === FALSE)
             throw new \Exception('Le deuxième paramètre doit être une chaine');
 
         return ((int) $date->format('Y') === $year) ? true : false;
@@ -81,15 +78,13 @@ class DateTimeValidator {
      * @throws \Exception
      */
 
-    public static function isMonth(\Datetime $date, $month)
-    {
-        if(!is_int($month))
+    public static function isMonth(\Datetime $date, $month){
+        if(is_int($month) === FALSE)
             throw new \Exception('Le deuxieme paramètre doit être un entier');
         if((int) $date->format('m') === $month)
             return true;
         else
             return false;
     }
-
 }
 

@@ -23,10 +23,9 @@ class IntValidator
      *
      * @throws \Exception
      */
-    public static function equal($a, $b)
-    {
-        if(!is_int($a) || !is_int($b))
-            throw new \Exception('The two parameters need to be an integer');
+    public static function equal($a, $b){
+        if(is_int($a) === FALSE || is_int($b) === FALSE)
+            throw new \Exception('Les deux parametres doivent être des entiers');
 
         return ($a == $b) ? true : false;
     }
@@ -39,10 +38,9 @@ class IntValidator
      *
      * @throws \Exception
      */
-    public static function superior($a, $b)
-    {
-        if(!is_int($a) || !is_int($b))
-            throw new \Exception('The two parameters need to be an integer');
+    public static function superior($a, $b){
+        if(is_int($a) === FALSE || is_int($b) === FALSE)
+            throw new \Exception('Les deux parametres doivent être des entiers');
 
         return ($a > $b) ? true : false;
     }
@@ -55,10 +53,9 @@ class IntValidator
      *
      * @throws \Exception
      */
-    public static function inferior($a, $b)
-    {
-        if(!is_int($a) || !is_int($b))
-            throw new \Exception('The two parameters need to be an integer');
+    public static function inferior($a, $b){
+        if(is_int($a) === FALSE || is_int($b) === FALSE)
+            throw new \Exception('Les deux parametres doivent être des entiers');
 
         return ($a < $b) ? true : false;
     }
@@ -71,10 +68,9 @@ class IntValidator
      * @return bool
      * @throws \Exception<
      */
-    public static function between($int, $min, $max)
-    {
-        if(!is_int($int) || !is_int($min) || !is_int($max))
-            throw new \Exception('The three parameters need to be integer');
+    public static function between($int, $min, $max){
+        if(is_int($int) === FALSE || is_int($min) === FALSE || is_int($max) === FALSE)
+            throw new \Exception('Les trois parametres doivent être des entiers');
 
         return ($int <= $max && $int >= $min) ?  true : false;
     }
@@ -86,10 +82,9 @@ class IntValidator
      *
      * @throws \Exception
      */
-    public static function negative($int)
-    {
-        if(!is_int($int))
-            throw new \Exception('The parameter need to be an integer');
+    public static function negative($int){
+        if(is_int($int) === FALSE)
+            throw new \Exception('Le parametre doit être un entier');
 
         return ($int <= 0) ? true : false;
     }
@@ -101,12 +96,10 @@ class IntValidator
      *
      * @throws \Exception
      */
-    public static function positive($int)
-    {
-        if(!is_int($int))
-            throw new \Exception('The parameter need to be an integer');
+    public static function positive($int){
+        if(is_int($int) === FALSE)
+            throw new \Exception('Le parametre doit être un entier');
 
         return ($int >= 0) ?  true : false;
     }
-
 }

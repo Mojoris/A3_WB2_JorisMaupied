@@ -12,7 +12,7 @@ use \mojo\Validator\IntValidator;
 
 /**
  * Class IntValidatorTest
- * @package Tests\src\Validator
+ * @package Tests\mojo\Validator
  */
 class IntValidatorTest extends \PHPUnit_Framework_TestCase
 {

@@ -26,7 +26,7 @@ class ArrayValidatorTest extends \PHPUnit_Framework_TestCase
     {
         $array = array();
 
-        $bool = ArrayValidator::isEmpty($array);
+        $bool  = ArrayValidator::isEmpty($array);
 
         $this->assertTrue($bool);
     }
@@ -40,7 +40,7 @@ class ArrayValidatorTest extends \PHPUnit_Framework_TestCase
     {
         $array = array('key' => 'chat');
 
-        $bool = ArrayValidator::isEmpty($array);
+        $bool  = ArrayValidator::isEmpty($array);
 
         $this->assertFalse($bool);
     }
@@ -65,7 +65,7 @@ class ArrayValidatorTest extends \PHPUnit_Framework_TestCase
     {
         $array = array('Dogs' => 3);
 
-        $bool = ArrayValidator::comparate($array, ArrayValidator::LENGTH_EQUAL, 1);
+        $bool  = ArrayValidator::comparate($array, ArrayValidator::LENGTH_EQUAL, 1);
 
         $this->assertTrue($bool);
     }
@@ -79,7 +79,7 @@ class ArrayValidatorTest extends \PHPUnit_Framework_TestCase
     {
         $array = array('Dogs' => 3);
 
-        $bool = ArrayValidator::comparate($array, ArrayValidator::LENGTH_EQUAL, 3);
+        $bool  = ArrayValidator::comparate($array, ArrayValidator::LENGTH_EQUAL, 3);
 
         $this->assertFalse($bool);
     }
@@ -93,7 +93,7 @@ class ArrayValidatorTest extends \PHPUnit_Framework_TestCase
     {
         $array = array('Dogs' => 3, 'Cats' => 10);
 
-        $bool = ArrayValidator::comparate($array, ArrayValidator::LENGTH_INFERIOR, 10);
+        $bool  = ArrayValidator::comparate($array, ArrayValidator::LENGTH_INFERIOR, 10);
 
         $this->assertTrue($bool);
     }
@@ -107,7 +107,7 @@ class ArrayValidatorTest extends \PHPUnit_Framework_TestCase
     {
         $array = array('Dogs' => 3, 'Cats' => 10);
 
-        $bool = ArrayValidator::comparate($array, ArrayValidator::LENGTH_SUPERIOR, 1);
+        $bool  = ArrayValidator::comparate($array, ArrayValidator::LENGTH_SUPERIOR, 1);
 
         $this->assertTrue($bool);
     }
@@ -121,7 +121,7 @@ class ArrayValidatorTest extends \PHPUnit_Framework_TestCase
     {
         $array = array('Dogs' => 3, 'Cats' => 10);
 
-        $bool = ArrayValidator::comparate($array, ArrayValidator::LENGTH_INFERIOR_OR_EQUAL, 2);
+        $bool  = ArrayValidator::comparate($array, ArrayValidator::LENGTH_INFERIOR_OR_EQUAL, 2);
 
         $this->assertTrue($bool);
     }
@@ -135,7 +135,7 @@ class ArrayValidatorTest extends \PHPUnit_Framework_TestCase
     {
         $array = array('Dogs' => 3, 'Cats' => 10);
 
-        $bool = ArrayValidator::comparate($array, ArrayValidator::LENGTH_SUPERIOR_OR_EQUAL, 2);
+        $bool  = ArrayValidator::comparate($array, ArrayValidator::LENGTH_SUPERIOR_OR_EQUAL, 2);
 
         $this->assertTrue($bool);
     }
@@ -149,7 +149,7 @@ class ArrayValidatorTest extends \PHPUnit_Framework_TestCase
     {
         $array = array('Dogs' => 3, 'Cats' => 10);
 
-        $bool = ArrayValidator::ElementsBetween($array, 1, 2);
+        $bool  = ArrayValidator::ElementsBetween($array, 1, 2);
 
         $this->assertTrue($bool);
     }
@@ -163,7 +163,7 @@ class ArrayValidatorTest extends \PHPUnit_Framework_TestCase
     {
         $array = array('Dogs' => 3, 'Cats' => 10);
 
-        $bool = ArrayValidator::ElementsBetween($array, 3, 5);
+        $bool  = ArrayValidator::ElementsBetween($array, 3, 5);
 
         $this->assertFalse($bool);
     }
@@ -177,7 +177,7 @@ class ArrayValidatorTest extends \PHPUnit_Framework_TestCase
     {
         $array = array('Dogs' => 3, 'Cats' => 10);
 
-        $bool = ArrayValidator::isThereValue($array, '3');
+        $bool  = ArrayValidator::isThereValue($array, '3');
 
         $this->assertTrue($bool);
     }
@@ -191,7 +191,7 @@ class ArrayValidatorTest extends \PHPUnit_Framework_TestCase
     {
         $array = array('Dogs' => 3, 'Cats' => 10);
 
-        $bool = ArrayValidator::isThereValue($array, '4');
+        $bool  = ArrayValidator::isThereValue($array, '4');
 
         $this->assertFalse($bool);
     }
@@ -205,7 +205,7 @@ class ArrayValidatorTest extends \PHPUnit_Framework_TestCase
     {
         $array = array('Dogs' => 3, 'Cats' => 10);
 
-        $bool = ArrayValidator::isThereKey($array, 'Dogs');
+        $bool  = ArrayValidator::isThereKey($array, 'Dogs');
 
         $this->assertTrue($bool);
     }
@@ -219,7 +219,7 @@ class ArrayValidatorTest extends \PHPUnit_Framework_TestCase
     {
         $array = array('Dogs' => 3, 'Cats' => 10);
 
-        $bool = ArrayValidator::isThereKey($array, 'Ca');
+        $bool  = ArrayValidator::isThereKey($array, 'Ca');
 
         $this->assertFalse($bool);
     }

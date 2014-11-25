@@ -8,7 +8,8 @@
 
 namespace mojo\Validator;
 
-class BooleanValidator {
+class BooleanValidator
+{
 
 /**
      * @param bool $boolean
@@ -18,9 +19,8 @@ class BooleanValidator {
      * @throws \Exception
      */
 
-    public static function isFalse($boolean)
-    {
-        if(!is_bool($boolean))
+    public static function isFalse($boolean){
+        if(is_bool($boolean)=== FALSE)
             throw new \Exception('La variable doit être un booléen');
         if(!$boolean)
             return true;
@@ -36,9 +36,8 @@ class BooleanValidator {
      * @throws \Exception
      */
 
-    public static function isTrue($boolean)
-    {
-        if(!is_bool($boolean))
+    public static function isTrue($boolean){
+        if(is_bool($boolean)=== FALSE)
             throw new \Exception('La variable doit être un booléen');
         if($boolean)
             return true;
