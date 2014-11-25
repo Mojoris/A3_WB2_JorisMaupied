@@ -63,7 +63,7 @@ class DateTimeValidator
      * @throws \Exception
      */
     public static function isYear(\Datetime $date, $year) {
-        if(is_int($year) === FALSE)
+        if(is_int($year) === false)
             throw new \Exception('Le deuxième paramètre doit être une chaine');
 
         return ((int) $date->format('Y') === $year) ? true : false;
@@ -79,7 +79,7 @@ class DateTimeValidator
      */
 
     public static function isMonth(\Datetime $date, $month) {
-        if(is_int($month) === FALSE)
+        if(is_int($month) === false)
             throw new \Exception('Le deuxieme paramètre doit être un entier');
         if((int) $date->format('m') === $month)
             return true;

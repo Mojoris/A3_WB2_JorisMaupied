@@ -24,10 +24,10 @@ class IntValidator
      * @throws \Exception
      */
     public static function equal($a, $b) {
-        if(is_int($a) === FALSE || is_int($b) === FALSE)
+        if(is_int($a) === false || is_int($b) === false)
             throw new \Exception('Les deux parametres doivent être des entiers');
 
-        return ($a == $b) ? true : false;
+        return ($a === $b) ? true : false;
     }
 
     /**
@@ -39,7 +39,7 @@ class IntValidator
      * @throws \Exception
      */
     public static function superior($a, $b) {
-        if(is_int($a) === FALSE || is_int($b) === FALSE)
+        if(is_int($a) === false || is_int($b) === false)
             throw new \Exception('Les deux parametres doivent être des entiers');
 
         return ($a > $b) ? true : false;
@@ -54,7 +54,7 @@ class IntValidator
      * @throws \Exception
      */
     public static function inferior($a, $b) {
-        if(is_int($a) === FALSE || is_int($b) === FALSE)
+        if(is_int($a) === false || is_int($b) === false)
             throw new \Exception('Les deux parametres doivent être des entiers');
 
         return ($a < $b) ? true : false;
@@ -69,10 +69,10 @@ class IntValidator
      * @throws \Exception<
      */
     public static function between($int, $min, $max) {
-        if(is_int($int) === FALSE || is_int($min) === FALSE || is_int($max) === FALSE)
+        if(is_int($int) === false || is_int($min) === false || is_int($max) === false)
             throw new \Exception('Les trois parametres doivent être des entiers');
 
-        return ($int <= $max && $int >= $min) ?  true : false;
+        return ($int <= $max && $int >= $min) ? true : false;
     }
 
     /**
@@ -83,7 +83,7 @@ class IntValidator
      * @throws \Exception
      */
     public static function negative($int) {
-        if(is_int($int) === FALSE)
+        if(is_int($int) === false)
             throw new \Exception('Le parametre doit être un entier');
 
         return ($int <= 0) ? true : false;
@@ -97,9 +97,9 @@ class IntValidator
      * @throws \Exception
      */
     public static function positive($int) {
-        if(is_int($int) === FALSE)
+        if(is_int($int) === false)
             throw new \Exception('Le parametre doit être un entier');
 
-        return ($int >= 0) ?  true : false;
+        return ($int >= 0) ? true : false;
     }
 }

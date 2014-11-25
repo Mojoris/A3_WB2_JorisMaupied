@@ -20,7 +20,7 @@ class BooleanValidator
      */
 
     public static function isFalse($boolean) {
-        if(is_bool($boolean) === FALSE)
+        if(is_bool($boolean) === false)
             throw new \Exception('La variable doit être un booléen');
         if(!$boolean)
             return true;
@@ -37,7 +37,7 @@ class BooleanValidator
      */
 
     public static function isTrue($boolean) {
-        if(is_bool($boolean) === FALSE)
+        if(is_bool($boolean) === false)
             throw new \Exception('La variable doit être un booléen');
         if($boolean)
             return true;
