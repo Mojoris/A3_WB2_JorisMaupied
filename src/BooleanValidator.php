@@ -6,7 +6,7 @@
  * Time: 15:44
  */
 
-namespace src\Validator;
+namespace mojo\Validator;
 
 class BooleanValidator {
 

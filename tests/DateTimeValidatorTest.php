@@ -6,19 +6,19 @@
  * Time: 17:48
  */
 
-namespace Tests\Validator;
+namespace Tests\mojo\Validator;
 
-use \src\Validator\DateTimeValidator;
+use \mojo\Validator\DateTimeValidator;
 
 /**
  * Class DateTimeValidatorTest
- * @package Tests\Validator
+ * @package Tests\src\Validator
  */
 class DateTimeValidatorTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
-     * Test if the date is major (over 18 years)
+     * Test if the date is major
      *
      * @throws \Exception
      */
@@ -35,13 +35,13 @@ class DateTimeValidatorTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test if the date is not major (over 18 years)
+     * Test if the date is not major
      *
      * @throws \Exception
      */
     public function testIsNotMajor()
     {
-        //if not set, throw error
+        //if not set, get an error
         date_default_timezone_set('Europe/Paris');
 
         $birthdate = new \DateTime('12/14/2000 00:00:00');
@@ -58,7 +58,7 @@ class DateTimeValidatorTest extends \PHPUnit_Framework_TestCase
      */
     public function testIsPassed()
     {
-        //if not set, throw error
+        //if not set, get an error
         date_default_timezone_set('Europe/Paris');
 
         $date = new \DateTime('12/14/2010 00:00:00');
@@ -75,7 +75,6 @@ class DateTimeValidatorTest extends \PHPUnit_Framework_TestCase
      */
     public function testIsNotPassed()
     {
-        //if not set, throw error
         date_default_timezone_set('Europe/Paris');
 
         $date = new \DateTime('12/14/2020 00:00:00');
@@ -92,7 +91,6 @@ class DateTimeValidatorTest extends \PHPUnit_Framework_TestCase
      */
     public function testIsFuture()
     {
-        //if not set, throw error
         date_default_timezone_set('Europe/Paris');
 
         $date = new \DateTime('12/14/2020 00:00:00');
@@ -109,7 +107,6 @@ class DateTimeValidatorTest extends \PHPUnit_Framework_TestCase
      */
     public function testIsNotFuture()
     {
-        //if not set, throw error
         date_default_timezone_set('Europe/Paris');
 
         $date = new \DateTime('12/14/2010 00:00:00');
@@ -126,7 +123,6 @@ class DateTimeValidatorTest extends \PHPUnit_Framework_TestCase
      */
     public function testIsYear()
     {
-        //if not set, throw error
         date_default_timezone_set('Europe/Paris');
 
         $date = new \DateTime('12/14/2010 00:00:00');
@@ -137,13 +133,12 @@ class DateTimeValidatorTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test if the date's year is not equal
+     * Test if the date year is not equal
      *
      * @throws \Exception
      */
     public function testIsNotYear()
     {
-        //if not set, throw error
         date_default_timezone_set('Europe/Paris');
 
         $date = new \DateTime('12/14/2010 00:00:00');
@@ -154,13 +149,12 @@ class DateTimeValidatorTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test if the date's year is equal
+     * Test if the date month is equal
      *
      * @throws \Exception
      */
     public function testIsMonth()
     {
-        //if not set, throw error
         date_default_timezone_set('Europe/Paris');
 
         $date = new \DateTime('12/14/2010 00:00:00');
@@ -171,13 +165,12 @@ class DateTimeValidatorTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test if the date's year is not equal
+     * Test if the date month is not equal
      *
      * @throws \Exception
      */
     public function testIsNotMonth()
     {
-        //if not set, throw error
         date_default_timezone_set('Europe/Paris');
 
         $date = new \DateTime('12/14/2010 00:00:00');

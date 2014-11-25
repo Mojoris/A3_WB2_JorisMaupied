@@ -6,13 +6,13 @@
  * Time: 17:47
  */
 
-namespace Tests\Steingate\Validator;
+namespace Tests\mojo\Validator;
 
-use \src\Validator\ArrayValidator;
+use \mojo\Validator\ArrayValidator;
 
 /**
  * Class ArrayValidatorTest
- * @package Tests\Steingate\Validator
+ * @package Tests\mojo\Validator
  */
 class ArrayValidatorTest extends \PHPUnit_Framework_TestCase
 {

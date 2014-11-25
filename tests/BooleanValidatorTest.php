@@ -6,13 +6,13 @@
  * Time: 17:48
  */
 
-namespace Tests\Validator;
+namespace Tests\mojo\Validator;
 
-use src\Validator\BooleanValidator;
+use \mojo\Validator\BooleanValidator;
 
 /**
  * Class BooleanValidatorTest
- * @package Tests\Validator
+ * @package Tests\src\Validator
  */
 class BooleanValidatorTest extends \PHPUnit_Framework_TestCase
 {

@@ -6,13 +6,13 @@
  * Time: 17:48
  */
 
-namespace Tests\Validator;
+namespace Tests\mojo\Validator;
 
-use \src\Validator\IntValidator;
+use \mojo\Validator\IntValidator;
 
 /**
  * Class IntValidatorTest
- * @package Tests\Steingate\Validator
+ * @package Tests\src\Validator
  */
 class IntValidatorTest extends \PHPUnit_Framework_TestCase
 {

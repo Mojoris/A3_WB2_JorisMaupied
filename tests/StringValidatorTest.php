@@ -6,13 +6,13 @@
  * Time: 17:49
  */
 
-namespace Tests\Validator;
+namespace Tests\mojo\Validator;
 
-use \src\Validator\StringValidator;
+use \mojo\Validator\StringValidator;
 
 /**
  * Class StringValidatorTest
- * @package Tests\Steingate\Validator
+ * @package Tests\src\Validator
  */
 class StringValidatorTest extends \PHPUnit_Framework_TestCase
 {
