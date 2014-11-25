@@ -20,8 +20,8 @@ class StringValidator
      * @throws \Exception
      */
 
-    public static function lengthEqual($string, $length){
-        if(is_string($string) === FALSE || is_int($length) === FALSE)
+    public static function lengthEqual($string, $length) {
+        if(is_string($string) === false || is_int($length) === false)
             throw new \Exception('Les deux variables doivent etres dans le bon format');
         if(mb_strlen($string) === $length)
             return true;
@@ -38,8 +38,8 @@ class StringValidator
      * @throws \Exception
      */
 
-    public static function lengthSuperiorX($string, $length){
-        if(is_string($string) === FALSE || is_int($length) === FALSE)
+    public static function lengthSuperiorX($string, $length) {
+        if(is_string($string) === false || is_int($length) === false)
             throw new \Exception('Les deux variables doivent êtres dans le bon format');
         if(mb_strlen($string) > $length)
             return true;
@@ -56,8 +56,8 @@ class StringValidator
      * @throws \Exception
      */
 
-    public static function lengthInferiorX($string, $length){
-        if(is_string($string) === FALSE || is_int($length) === FALSE)
+    public static function lengthInferiorX($string, $length) {
+        if(is_string($string) === false || is_int($length) === false)
             throw new \Exception('Les deux variables doivent etres dans le bon format');
         if(mb_strlen($string) < $length)
             return true;
@@ -75,8 +75,8 @@ class StringValidator
     * @throws \Exception
     */
 
-    public static function lengthBetweenXX($string, $varMin, $varMax){
-        if(is_string($string) === FALSE || is_int($varMin) === FALSE || is_int($varMax) === FALSE)
+    public static function lengthBetweenXX($string, $varMin, $varMax) {
+        if(is_string($string) === false || is_int($varMin) === false || is_int($varMax) === false)
             throw new \Exception('Les deux variables doivent etres dans le bon format');
         $lengthString = mb_strlen($string);
         if($lengthString >= $varMin && $lengthString <= $varMax)
@@ -93,11 +93,11 @@ class StringValidator
      * @throws \Exception
      */
 
-    public static function haveNoWhiteSpaceBeforeEnd($string){
-        if(is_string($string) === FALSE)
+    public static function haveNoWhiteSpaceBeforeEnd($string) {
+        if(is_string($string) === false)
             throw new \Exception('La variable doit etre de type String');
         $stringNoSpace = trim($string);
-        if($stringNoSpace != $string)
+        if($stringNoSpace !== $string)
             return true;
         else
             return false;
@@ -111,8 +111,8 @@ class StringValidator
      * @throws \Exception
      */
 
-    public static function noWhiteSpace($string){
-        if(is_string($string) === FALSE)
+    public static function noWhiteSpace($string) {
+        if(is_string($string) === false)
             throw new \Exception('La variable doit etre de type String');
         $checkWhiteSpace = explode(' ', $string);
         if(count($checkWhiteSpace) > 2)
