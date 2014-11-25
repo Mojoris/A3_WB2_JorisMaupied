@@ -5,7 +5,8 @@
     },
     "autoload": {
         "psr-4": {
-            "src\\Validator\\":"src"
+            "src\\Validator\\":"src",
+            "Tests\\Validator\\":"tests"
         }
     },
     "config":{
